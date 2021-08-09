@@ -43,9 +43,9 @@ type ProgressBar struct {
 	message chan string
 }
 
-// NewProgressBar returns a new progress bar that is width characters
+// New returns a new progress bar that is width characters
 // wide and reaches 100% capacity after max Increment() calls.
-func NewProgressBar(width, max int, updateEvery time.Duration,
+func New(width, max int, updateEvery time.Duration,
 	updateAtIncrement bool) *ProgressBar {
 	pbar := &ProgressBar{
 		width:                      float64(width),

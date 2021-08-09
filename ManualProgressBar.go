@@ -21,8 +21,8 @@ type ManualProgressBar struct {
 	startTime       time.Time
 }
 
-// NewManualProgressBar returns a new ManualProgressBar
-func NewManualProgressBar(width, max int) *ManualProgressBar {
+// NewManual returns a new ManualProgressBar
+func NewManual(width, max int) *ManualProgressBar {
 	return &ManualProgressBar{
 		width:           float64(width),
 		maxProgress:     float64(max),
