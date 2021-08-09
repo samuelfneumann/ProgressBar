@@ -66,7 +66,7 @@ pbar := New(50, 100, time.Second, true) // 50 characters wide, Increment() must 
 pbar.Display()
 for i := 0; i < 100; i++ {
    pbar.Increment()
-   pbar.AddMessage(fmt.Sprintf("Iteration %d", i)
+   pbar.AddMessage(fmt.Sprintf("Iteration %d", i))
    // do stuff...
 }
 ```
