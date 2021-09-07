@@ -17,11 +17,11 @@ The `ProgressBar` is the recommended one to use. It manages everything
 concurrently and only requires that the user notify the progres bar when
 it should be incremented with the `Increment()` method. The `ProgressBar`
 has the following constructor:
-```
+```go
 func New(width, max int, updateEvery time.Duration, updateAtIncrement bool)
 ```
 The `ManualProgressBar` has the following constructor:
-```
+```go
 func NewManual(width, max int, updateAtIncrement bool)
 ```
 
@@ -60,7 +60,7 @@ The bar is updated when one of the following occurs:
 
 ## Example
 And example of how to use the `ProgressBar`:
-```
+```go
 pbar := New(50, 100, time.Second, true) // 50 characters wide, Increment() must be called 100 times to fill the progress bar
 
 pbar.Display()
@@ -72,7 +72,7 @@ for i := 0; i < 100; i++ {
 ```
 
 To use the `ManualProgressBar`:
-```
+```go
 pbar := NewManual(50, 100, false) // 50 characters wide, Increment() must be called 100 times to fill the progress bar
 
 pbar.Display()
@@ -83,7 +83,7 @@ for i := 0; i < 100; i++ {
 }
 ```
 or
-```
+```go
 pbar := NewManual(50, 100, true) // 50 characters wide, Increment() must be called 100 times to fill the progress bar
 
 pbar.Display()
